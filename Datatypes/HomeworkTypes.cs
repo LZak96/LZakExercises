@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -39,6 +40,7 @@ namespace Datatypes
             Console.WriteLine("Odwrotna kolejność liczb: " + char3 + char2 + char1);
         }
 
+
         public static void Exercise3()
         {
             //Napisz program, który na podstawie podanej szerokości i długości prostokąta wyliczy długość przekątnej. (Aby, obliczyć kwadrat liczby użyj metody Math.Pow())
@@ -46,12 +48,69 @@ namespace Datatypes
             Console.WriteLine("Witam w programie, który oblicza długość przekątnej prostokąta.");
             Console.WriteLine("Podaj szerokość prostokąta");
             string fromConsole1 = Console.ReadLine();
-            int width1 = Int32.Parse(fromConsole1);
+            double width1 = double.Parse (fromConsole1);
+
             Console.WriteLine("Podaj długość prostokąta");
             string fromConsole2 = Console.ReadLine();
-            int length1 = Int32.Parse(fromConsole2);
+            double length1 = double.Parse (fromConsole2);
 
-            Console.WriteLine("Obliczona długość przekątnej wynosi: ");
+            double answer1 = Math.Sqrt(Math.Pow(width1, 2) + Math.Pow(length1, 2));
+            Console.WriteLine("Obliczona długość przekątnej wynosi: " +answer1);
+        }
+
+        public static void Exercise4()
+        {
+            // Napisz program w którym stworzysz 2 zmienne liczbowe, oraz jedną tekstową, a następnie przypiszesz im następujące wartości: a. 10 b.Szkoła Dotneta c. 12,5
+            // Pamiętaj o użyciu poprawnych typów danych.
+
+            int variable1 = 10;
+            string variable2 = "Szkoła Dotneta";
+            double variable3 = 12.5;
+
+            Console.Write($"Oto twoje dane: \r\n {variable1} \r\n {variable2} \r\n {variable3}");
+        }
+
+
+        public static void Exercise5()
+        {
+            // Napisz program w którym poprosisz użytkownika o jego dane personalne tj. Imię, nazwisko, numer telefonu, adres email, wzrost, waga(np. 85, 7), itp(postaraj się wymyślić jak najwięcej)
+            // i spróbuj przekonwertować odpowiedź do odpowiedniego typu danych używając metody: typDanych.Parse(odpowiedźOdUżytkownika).
+
+            Console.WriteLine("Dzień dobry, poniżej proszę uzupełnić swoje dane personalne.");
+            Console.WriteLine("Podaj imię: ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Podaj nazwisko: ");
+            string surname = Console.ReadLine();
+
+            int chosenOption;
+            double chosenOption1;
+
+            Console.WriteLine("Podaj wiek");
+            string age = Console.ReadLine();
+            Int32.TryParse (age, out chosenOption);
+
+            Console.WriteLine("Podaj numer pesel: ");
+            string nrPesel = Console.ReadLine();
+            Int32.TryParse (nrPesel, out chosenOption);
+
+            Console.WriteLine("Podaj numer telefonu: ");
+            string nrPhone = Console.ReadLine();
+            Int32.TryParse (nrPhone, out chosenOption);
+
+            Console.WriteLine("Podaj email: ");
+            string email = Console.ReadLine();
+
+            Console.WriteLine("Podaj wzrost: ");
+            string height = Console.ReadLine();
+            Int32.TryParse (height, out chosenOption);
+
+            Console.WriteLine("Podaj wagę: ");
+            string weight = Console.ReadLine();
+            double.TryParse(weight, out chosenOption1);
+
+            Console.WriteLine("Podaj wykształcenie: ");
+            string education = Console.ReadLine();
         }
     }
 }
