@@ -4,6 +4,7 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Datatypes
 {
@@ -29,7 +30,7 @@ namespace Datatypes
             Console.WriteLine("Nr Pracownika: " + employerNumber);
         }
 
-        public static void Exercise2() 
+        public static void Exercise2()
         {
             //Napisz program, w którym stworzysz 3 zmienne z jedną literą, a następnie wypiszesz je w odwrotnej kolejności niż zostały zadeklarowane.
 
@@ -48,14 +49,14 @@ namespace Datatypes
             Console.WriteLine("Witam w programie, który oblicza długość przekątnej prostokąta.");
             Console.WriteLine("Podaj szerokość prostokąta");
             string fromConsole1 = Console.ReadLine();
-            double width1 = double.Parse (fromConsole1);
+            double width1 = double.Parse(fromConsole1);
 
             Console.WriteLine("Podaj długość prostokąta");
             string fromConsole2 = Console.ReadLine();
-            double length1 = double.Parse (fromConsole2);
+            double length1 = double.Parse(fromConsole2);
 
             double answer1 = Math.Sqrt(Math.Pow(width1, 2) + Math.Pow(length1, 2));
-            Console.WriteLine("Obliczona długość przekątnej wynosi: " +answer1);
+            Console.WriteLine("Obliczona długość przekątnej wynosi: " + answer1);
         }
 
         public static void Exercise4()
@@ -88,22 +89,22 @@ namespace Datatypes
 
             Console.WriteLine("Podaj wiek");
             string age = Console.ReadLine();
-            Int32.TryParse (age, out chosenOption);
+            Int32.TryParse(age, out chosenOption);
 
             Console.WriteLine("Podaj numer pesel: ");
             string nrPesel = Console.ReadLine();
-            Int32.TryParse (nrPesel, out chosenOption);
+            Int32.TryParse(nrPesel, out chosenOption);
 
             Console.WriteLine("Podaj numer telefonu: ");
             string nrPhone = Console.ReadLine();
-            Int32.TryParse (nrPhone, out chosenOption);
+            Int32.TryParse(nrPhone, out chosenOption);
 
             Console.WriteLine("Podaj email: ");
             string email = Console.ReadLine();
 
             Console.WriteLine("Podaj wzrost: ");
             string height = Console.ReadLine();
-            Int32.TryParse (height, out chosenOption);
+            Int32.TryParse(height, out chosenOption);
 
             Console.WriteLine("Podaj wagę: ");
             string weight = Console.ReadLine();
