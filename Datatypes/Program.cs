@@ -7,7 +7,7 @@ namespace Datatypes
     {
         static void Main(string[] args)
         {
-            HomeworkConditions.Exercise10();
+            HomeworkConditions.Exercise13();
         }
     }
 }

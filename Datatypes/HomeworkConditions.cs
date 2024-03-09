@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Channels;
@@ -277,6 +279,134 @@ namespace Datatypes
             else
             {
                 Console.WriteLine("Z podanych długości nie można zbudować trójkąta.");
+            }
+        }
+
+        public static void Exercise11()
+        {
+            //Napisz program, który zmieni ocenę ucznia na jej opis wg podanej tabeli: 6 Celujący 5 Bardzo dobry 4 Dobry
+            //3 Dostateczny 2 Dopuszczający 1 Niedostateczny
+            //Dane testowe : 3
+            //Rezultat w terminalu: Dostateczny
+
+            Console.WriteLine("Podaj swoją ocenę.");
+            Int32.TryParse(Console.ReadLine(), out int note);
+
+            switch (note)
+            {
+                case 1:
+                    Console.WriteLine("Niedostateczny");
+                    break;
+                case 2:
+                    Console.WriteLine("Dopuszczający");
+                    break;
+                case 3:
+                    Console.WriteLine("Dostateczny");
+                    break;
+                case 4:
+                    Console.WriteLine("Dobry");
+                    break;
+                case 5:
+                    Console.WriteLine("Bardzo dobry");
+                    break;
+                case 6:
+                    Console.WriteLine("Celujący");
+                    break;
+            }
+        }
+        public static void Exercise12()
+        {
+            //Napisz program, który pobierze numer dnia tygodnia i wyświetli jego nazwę
+            //Dane testowe : 4
+            //Rezultat w terminalu: Czwartek
+
+            Console.WriteLine("Podaj numer dnia tygodnia.");
+
+            Int32.TryParse(Console.ReadLine(), out int dayNumber);
+
+            switch (dayNumber)
+            {
+                case 1:
+                    Console.WriteLine("Poniedziałek");
+                    break;
+                case 2:
+                    Console.WriteLine("Wtorek");
+                    break;
+                case 3:
+                    Console.WriteLine("Środa");
+                    break;
+                case 4:
+                    Console.WriteLine("Czwartek");
+                    break;
+                case 5:
+                    Console.WriteLine("Piątek");
+                    break;
+                case 6:
+                    Console.WriteLine("Sobota");
+                    break;
+                case 7:
+                    Console.WriteLine("Niedziela");
+                    break;
+            }
+        }
+        public static void Exercise13()
+        {
+
+            //Napisz program, który będzie posiadał proste menu(wg.Wzoru poniżej) I będzie prostym kalkulatorem
+            //Podaj pierwszą liczbę:
+            //Podaj drugą liczbę:
+            //Podaj numer operacji do wykonania:
+            //1.Dodawanie
+            //2.Odejmowanie
+            //3.Mnożenie
+            //4.Dzielenie
+            //Twój wynik to:
+
+            Console.WriteLine("Witam, w prostym kalkulatorze.");
+            Console.WriteLine("Podaj pierwszą liczbę.");
+            double.TryParse(Console.ReadLine(), out double n1);
+
+            Console.WriteLine("Podaj drugą liczbę.");
+            double.TryParse (Console.ReadLine(), out double n2);
+
+            Console.WriteLine("Podaj numer operacji do wykonania:");
+            Console.WriteLine("1. Dodawanie");
+            Console.WriteLine("2. Odejmowanie");
+            Console.WriteLine("3. Mnożenie");
+            Console.WriteLine("4. Dzielenie");
+
+            Int32.TryParse(Console.ReadLine(), out int operation);
+
+            if (operation == 1)
+            {
+                double addition = (n1 + n2);
+                Console.WriteLine($"Twój wynik to: {addition}");
+            }
+            else if (operation == 2)
+            {
+                double subtraction = (n1 - n2);
+                Console.WriteLine($"Twój wynik to: {subtraction}");
+            }
+            else if (operation == 3)
+            {
+                double multiplication = (n1 * n2);
+                Console.WriteLine($"Twój wynik to: {multiplication}");
+            }
+            else if (operation == 4)
+            {
+                if (n2 != 0)
+                {
+                    double division = (n1 / n2);
+                    Console.WriteLine($"Twój wynik to: {division}");
+                }
+                else
+                {
+                    Console.WriteLine("Cholero nie dziel przez 0");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Błąd, nie ma takiej operacji.");
             }
         }
     }
