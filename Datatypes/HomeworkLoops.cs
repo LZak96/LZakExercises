@@ -19,15 +19,15 @@ namespace Homework
 
             for (int i = 0; i <= 100; i++)
             {
-                int counter = 0;
+                int numberOfDivisors = 0;
                 for (int j = 1; j <= i; j++)
                 {
                     if (i % j == 0)
                     {
-                        counter++;
+                        numberOfDivisors++;
                     }
                 }
-                if (counter == 2)
+                if (numberOfDivisors == 2)
                 {
                     Console.Write(i + " ");
                 }
@@ -118,7 +118,7 @@ namespace Homework
             {
                 if (i != 0)
                 {
-                    result = result + (1 / i);
+                    result += (1 / i);
                 }
             }
             Console.WriteLine("Wynik wg powyższego wzoru od 0 do 20: " + result);
@@ -132,12 +132,7 @@ namespace Homework
 
             Console.WriteLine("Podaj długość przekątnej.");
             Int32.TryParse(Console.ReadLine(), out int diagonalLenght);
-            if (diagonalLenght % 2 == 0)
-            {
-                Console.WriteLine("Przekątna musi być liczbą nieparzystą");
-            }
-            else
-            {
+            
                 for (int i = 1; i <= diagonalLenght; i += 2)
                 {
 
@@ -153,7 +148,6 @@ namespace Homework
                     string pauze = new string(' ', (diagonalLenght - i) / 2);
                     Console.WriteLine(pauze + star + pauze);
                 }
-            }
         }
 
         public static void Exercise8()
